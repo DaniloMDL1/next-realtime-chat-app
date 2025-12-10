@@ -17,7 +17,7 @@ const UserAvatar = ({ user, size }: Props) => {
     return (
         <div className="relative w-fit">
             <Avatar className={`${size ? size : "size-10"}`}>
-                <AvatarImage src={user?.image ?? undefined} />
+                <AvatarImage src={user?.image ?? ""} />
                 <AvatarFallback>
                     {user?.name && getInitials(user.name)}
                 </AvatarFallback>

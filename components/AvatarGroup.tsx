@@ -14,7 +14,7 @@ const AvatarGroup = ({ users }: Props) => {
             <div className="flex gap-1">
                 {slicedUsers.slice(0, 2).map((user) => (
                     <Avatar key={user.id} className="size-6">
-                        <AvatarImage src={user?.image ?? undefined} />
+                        <AvatarImage src={user?.image ?? ""} />
                         <AvatarFallback>
                             {user?.name && getInitials(user.name)}
                         </AvatarFallback>
@@ -24,9 +24,9 @@ const AvatarGroup = ({ users }: Props) => {
             {slicedUsers[2] && (
                 <div className="absolute left-3">
                     <Avatar className="size-6">
-                        <AvatarImage src={slicedUsers[2].image ?? undefined} />
+                        <AvatarImage src={slicedUsers[2]?.image ?? ""} />
                         <AvatarFallback>
-                            {slicedUsers[2].name && getInitials(slicedUsers[2].name)}
+                            {slicedUsers[2]?.name && getInitials(slicedUsers[2].name)}
                         </AvatarFallback>
                     </Avatar>
                 </div>
